@@ -10,15 +10,20 @@ import os.path
 
 
 def set_in_path():
-    in_path = '/Volumes/李岩硬盘/27/'
+    in_path = '/Volumes/李岩硬盘/27'
     print('当前文件夹路径：'+ in_path + '\n')
     while_flag = 0
     while while_flag == 0:
         tag = input('是否修改路径？y/n'+ '\n')
         if tag == 'y':
-            while_flag = 1
+
             in_path = input("请输入文件夹路径"+ '\n')
-            return in_path
+            if os.path.exists(in_path):  # 判断一个路径（目录或文件）是否存在----os.path.exists()
+                while_flag = 1
+                return in_path
+            else:
+                print("路径不存在，请重新输入")
+
         elif tag == 'n':
             while_flag = 1
             return in_path
@@ -68,3 +73,7 @@ if dname == '':
     dname = in_path.split('/')[-2]
 print(in_path , dname)
 # rename(in_path, file, flag, flag2)
+
+
+# 4、将路径分解为目录名和文件名——os.path.split()
+# 5、分解文件名的扩展名——os.path.splitext()

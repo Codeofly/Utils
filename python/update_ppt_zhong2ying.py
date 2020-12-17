@@ -33,6 +33,7 @@ def rename(path, file):
 
                     num0 = '%02d' % flag
                     num = '%06d' % flag2
+
                     kuo_zhan_ming = name.split('.')[-1]
                     new_name = 'PPT' + '_' + str(num0) + '_' + num + '.' + kuo_zhan_ming
                     # 遍历所有文件
