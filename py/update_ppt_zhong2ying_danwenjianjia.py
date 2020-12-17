@@ -39,7 +39,7 @@ def rename(path, file, f, f2):
             kuo_zhan_ming = name.split('.')[-1]  # 提取扩展名
             new_name = 'PPT' + '_' + num0 + '_' + num + '.' + kuo_zhan_ming  # 组合新文件名
             # 遍历所有文件
-            # os.renames(name, new_name)  # 改名
+            os.renames(name, new_name)  # 改名
             items2.writelines(name + '\t' + new_name + '\n')  # 写入文件
             f2 += 1  # 文件序号自增
 
