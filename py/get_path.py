@@ -7,7 +7,7 @@
 import os
 
 
-def get(p='/'):
+def get(p='/Users/liyan/'):
     path = p  # 目录路径
     flag = 1  # 循环判断
     while flag == 1:
@@ -15,6 +15,7 @@ def get(p='/'):
         index = 0  # 目录列表 索引
         dir_list = os.listdir(path)  # 获取指定目录下的所有子目录的列表
         dir_list = [x for x in dir_list if x[0] != '.']  # 去除隐藏文件
+        dir_list.sort()
         # 输出选项列表
         print('0', '|', '上一级')
         for i in dir_list:
