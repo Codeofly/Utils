@@ -1,9 +1,8 @@
-'''
-PPT中文名 批量 改成 英文名 并输出csv文件
-tsv文件格式： PPT所在目录名，中文名，英文名
-@in_path:中文名ppt所在路径、英文名ppt所在路径
-@file:输出文件路径
-'''
+# PPT中文名 批量 改成 英文名 并输出csv文件
+# tsv文件格式： PPT所在目录名，中文名，英文名
+# @in_path:中文名ppt所在路径、英文名ppt所在路径
+# @file:输出文件路径
+
 
 import os
 import os.path
@@ -23,13 +22,13 @@ flag2 = int(input('输入文件序号（整数）：'))  # 文件夹内容序号
 file = out_path + dname + '_' + time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) + '.tsc'
 
 
-def rename(path, file, f, f2):
+def rename(path, myfile, f, f2):
     # os.chdir() 方法用于改变当前工作目录到指定的路径。
     os.chdir(path)
     # 方法用于返回指定的文件夹包含的文件或文件夹的名字的列表。这个列表以字母顺序。
     items = os.listdir(path)
     items.sort()  # 内容排序
-    items2 = open(file, mode='a')
+    items2 = open(myfile, mode='a')
 
     for name in items:
         if name[0] != '.':  # 排除'.'开头的隐藏文件
