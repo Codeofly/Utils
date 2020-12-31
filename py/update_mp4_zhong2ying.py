@@ -1,6 +1,6 @@
 '''
-视频中文名 批量 改成 英文名 并输出csv文件 
-csv文件格式： 视频所在目录名，中文名，英文名
+视频中文名 批量 改成 英文名 并输tsv文件
+tsv文件格式： 视频所在目录名 \t 中文名 \t 英文名
 @path:中文名视频所在路径、英文名视频所在路径
 @file:输出文件路径
 '''
@@ -21,7 +21,6 @@ def rename(path, file2):
 
     flag = 0
     flag2 = 1
-    ds = '.DS_Store'
     for directory_name in items:
         if directory_name[0] == '.':
             continue

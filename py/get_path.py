@@ -7,7 +7,7 @@
 import os
 
 
-def get(p='/Users/liyan/'):
+def get(p='/'):
     path = p  # 目录路径
     flag = 1  # 循环判断
     while flag == 1:

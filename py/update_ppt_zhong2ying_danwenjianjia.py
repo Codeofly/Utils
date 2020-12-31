@@ -47,6 +47,3 @@ def rename(path, myfile, f, f2):
 
 
 rename(in_path, file, flag, flag2)
-
-# 4、将路径分解为目录名和文件名——os.path.split()
-# 5、分解文件名的扩展名——os.path.splitext()
